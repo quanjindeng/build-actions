@@ -56,3 +56,4 @@ svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/application
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-gowebdav package/luci-app-gowebdav
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-socat package/luci-app-socat
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-vssr package/luci-app-vssr
+git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
