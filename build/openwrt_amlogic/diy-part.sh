@@ -52,8 +52,8 @@ sed -i 's/"带宽监控"/"监控"/g' `grep "带宽监控" -rl ./`
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
 
 
-svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-adguardhome package/luci-app-adguardhome
-svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-gowebdav package/luci-app-gowebdav
-svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-socat package/luci-app-socat
-svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-vssr package/luci-app-vssr
+# svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-adguardhome package/luci-app-adguardhome
+# svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-gowebdav package/luci-app-gowebdav
+# svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-socat package/luci-app-socat
+# svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-vssr package/luci-app-vssr
 git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
