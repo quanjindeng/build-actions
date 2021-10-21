@@ -2,7 +2,7 @@
 #
 # 编译固件所用，不带SSH连接配置固件了
 #
-# 需要配文件请用 configure.yml 先配置好文件再编译
+# 需要配文件请用 make-menuconfig.yml 先配置好文件再编译
 #
 # 把定时更新固件发布到云端或者发布固件都需要REPO_TOKEN密匙
 #
@@ -93,7 +93,7 @@ jobs:
         fi
         echo "NETIP=package/base-files/files/etc/networkip" >> $GITHUB_ENV
         echo "DELETE=package/base-files/files/etc/deletefile" >> $GITHUB_ENV
-        if [ -n "$(ls -A build/common/0930gg 2>/dev/null)" ]; then
+        if [ -n "$(ls -A build/common/1022gg 2>/dev/null)" ]; then
           source build/common/common.sh && Diy_gonggao
         else
           source build/common/common.sh && Diy_tongzhi
