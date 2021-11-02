@@ -54,6 +54,8 @@ EOF
 # 添加其它插件
 # git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 # svn co https://github.com/openwrt/luci/trunk/applications/luci-app-acme package/luci-app-acme
+git clone https://github.com/yichya/luci-app-xray.git package/luci-app-xray
+
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间
 cat >${GITHUB_WORKSPACE}/Clear <<-EOF
