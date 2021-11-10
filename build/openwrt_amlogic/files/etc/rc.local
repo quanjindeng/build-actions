@@ -1,0 +1,13 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+/usr/sbin/balethirq.pl
+
+## 取消自动挂载非必要分区，避免更新时出现分区识别问题
+umount /mnt/mmcblk2p1 && mount /dev/mmcblk2p1 /boot
+umount /mnt/mmcblk2p2 && umount /mnt/mmcblk2p3
+
+## 自用，为acme.sh证书工作目录创建软链接，避免更新后丢失文件
+ln -s /mnt/mmcblk2p4/.acme.sh/ /root/.acme.sh
+
+exit 0
