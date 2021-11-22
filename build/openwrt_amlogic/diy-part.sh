@@ -11,7 +11,7 @@
 
 cat >$NETIP <<-EOF
 uci set network.lan.ipaddr='10.10.10.1'                                    # IPv4 地址(openwrt后台地址)
-#uci set network.lan.netmask='255.255.255.0'                                 # IPv4 子网掩码
+uci set network.lan.netmask='255.255.255.0'                                 # IPv4 子网掩码
 #uci set network.lan.gateway='192.168.2.1'                                   # IPv4 网关
 #uci set network.lan.broadcast='192.168.2.255'                               # IPv4 广播
 #uci set network.lan.dns='114.114.114.114 223.5.5.5'                         # DNS(多个DNS要用空格分开)
@@ -34,7 +34,7 @@ sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ                                          
 # 设置打包固件的机型，内核组合（可用内核是时时变化的,过老的内核就删除的，所以要选择什么内核请看说明）
 cat >$GITHUB_WORKSPACE/amlogic_openwrt <<-EOF
 amlogic_model=s905d
-amlogic_kernel=5.10.70_5.4.150
+amlogic_kernel=5.4.150
 rootfs_size=1024
 EOF
 
