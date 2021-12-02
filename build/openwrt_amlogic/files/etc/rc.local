@@ -7,7 +7,4 @@
 # umount /mnt/mmcblk2p1 && mount /dev/mmcblk2p1 /boot
 # umount /mnt/mmcblk2p2 && umount /mnt/mmcblk2p3
 
-## 自用，为acme.sh证书工作目录创建软链接，避免更新后丢失文件
-ln -s /mnt/mmcblk2p4/.acme.sh/ /root/.acme.sh
-
 exit 0
