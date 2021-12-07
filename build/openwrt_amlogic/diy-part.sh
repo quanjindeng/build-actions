@@ -38,7 +38,7 @@ amlogic_kernel=5.4.150_5.15.6
 rootfs_size=1024
 EOF
 
-
+git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
 
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间
