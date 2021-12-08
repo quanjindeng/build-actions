@@ -221,6 +221,7 @@ jobs:
           source "${PATH1}/common.sh" && Diy_amlogic
         fi
         cd openwrt
+        ls | grep -v bin | xargs rm -rf
         cp -Rf bin/targets/*/* "${Home}"/upgrade
         cd bin/targets/*/*
         rename -v "s/^immortalwrt/openwrt/" *
