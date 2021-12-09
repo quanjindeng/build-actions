@@ -4,7 +4,8 @@
 /usr/sbin/balethirq.pl
 
 ## 取消自动挂载非必要分区，避免更新时出现分区识别问题
+##（仅限系统已写入并运行在emmc，此时取消下面两行的注释）
 # umount /mnt/mmcblk2p1 && mount /dev/mmcblk2p1 /boot
-# umount /mnt/mmcblk2p2 && umount /mnt/mmcblk2p3
+# UMOUNT=$(df / | grep /dev | cut -c5-14) && umount /mnt$UMOUNT
 
 exit 0
