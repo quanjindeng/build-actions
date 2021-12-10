@@ -117,7 +117,11 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /${{matrix.target}}
         sudo chown $USER:$GROUPS /${{matrix.target}}
-        
+        if [[ "${Modelfile}" == "openwrt_amlogic" ]]; then
+            docker rmi $(docker images -q)
+            sudo -E apt-get remove -y --purge azure-cli ghc zulu* hhvm llvm* firefox google* dotnet* powershell mysql* php* mssql-tools msodbcsql17 android*
+            sudo rm -rf /etc/mysql /etc/php /swapfile
+        fi
     
     - name: 下载"${{matrix.target}}"源码
       working-directory: /${{matrix.target}}
@@ -221,8 +225,7 @@ jobs:
         if [ "${AUTOMATIC_AMLOGIC}" == "true" ]; then
           source "${PATH1}/common.sh" && Diy_amlogic
         fi
-        cd openwrt
-        ls | grep -v bin | xargs rm -rf
+        cd "${Home}"
         cp -Rf bin/targets/*/* "${Home}"/upgrade
         cd bin/targets/*/*
         rename -v "s/^immortalwrt/openwrt/" *
