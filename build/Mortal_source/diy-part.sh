@@ -41,13 +41,6 @@ cat >$DELETE <<-EOF
 EOF
 
 
-# 设置打包固件的机型，内核组合（可用内核是时时变化的,过老的内核就删除的，所以要选择什么内核请看说明）
-cat >$GITHUB_WORKSPACE/amlogic_openwrt <<-EOF
-amlogic_model=s905d
-amlogic_kernel=5.4.150
-rootfs_size=1024
-EOF
-
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间
 cat >${GITHUB_WORKSPACE}/Clear <<-EOF
 rm -rf config.buildinfo
