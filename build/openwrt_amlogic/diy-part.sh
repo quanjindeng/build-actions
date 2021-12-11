@@ -39,6 +39,7 @@ rootfs_size=1024
 EOF
 
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
+git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
 
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间
