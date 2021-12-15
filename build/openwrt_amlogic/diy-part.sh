@@ -39,7 +39,7 @@ rootfs_size=1024
 EOF
 
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
-git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
+git clone https://github.com/kenzok8/small-package package/small-package
 
 
 # Temporary repair https://github.com/coolsnowwolf/lede/issues/8423
