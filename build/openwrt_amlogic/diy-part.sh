@@ -42,6 +42,12 @@ git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-
 git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 
 
+# Temporary repair https://github.com/coolsnowwolf/lede/issues/8423
+
+sed -i 's/^\s*$[(]call\sEnsureVendoredVersion/#&/' feeds/packages/utils/dockerd/Makefile
+
+
+
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间
 cat >${GITHUB_WORKSPACE}/Clear <<-EOF
 rm -rf config.buildinfo
