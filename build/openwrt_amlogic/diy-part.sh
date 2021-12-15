@@ -46,7 +46,9 @@ git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.gi
 
 sed -i 's/^\s*$[(]call\sEnsureVendoredVersion/#&/' feeds/packages/utils/dockerd/Makefile
 
+rm -rf ./feeds/packages/utils/runc/Makefile
 
+svn export https://github.com/openwrt/packages/trunk/utils/runc/Makefile ./feeds/packages/utils/runc/Makefile
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间
 cat >${GITHUB_WORKSPACE}/Clear <<-EOF
