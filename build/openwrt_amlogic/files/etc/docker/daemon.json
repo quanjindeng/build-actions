@@ -13,3 +13,10 @@
      "https://hub-mirror.c.163.com"
    ]
 }
+
+{
+  "ipv6": true,
+  "fixed-cidr-v6": "fd00::/80",
+  "experimental": true,
+  "ip6tables": true
+}
