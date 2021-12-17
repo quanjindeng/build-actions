@@ -43,7 +43,7 @@ git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-
 #git clone https://github.com/kenzok8/small-package package/small-package
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-bypass package/luci-app-bypass
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-mosdns package/luci-app-mosdns
-
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-vssr package/luci-app-vssr
 
 # Temporary repair https://github.com/coolsnowwolf/lede/issues/8423
 sed -i 's/^\s*$[(]call\sEnsureVendoredVersion/#&/' feeds/packages/utils/dockerd/Makefile
