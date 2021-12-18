@@ -9,7 +9,7 @@
 #
 
 
-name: compile
+name: 编译并使用Flippy仓库打包
 on:
   workflow_dispatch:
   push:
