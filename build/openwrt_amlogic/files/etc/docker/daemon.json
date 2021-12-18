@@ -7,17 +7,12 @@
      "max-size": "10m",
      "max-file": "5"
    },
-  "iptables": true,
+  "ipv6": true,
+  "fixed-cidr-v6": "fd00::/80",
+  "experimental": true,
   "registry-mirrors": [
      "https://docker.mirrors.ustc.edu.cn",
      "https://registry.cn-shanghai.aliyuncs.com",
      "https://hub-mirror.c.163.com"
    ]
-}
-
-{
-  "ipv6": true,
-  "fixed-cidr-v6": "fd00::/80",
-  "experimental": true,
-  "ip6tables": true
 }
